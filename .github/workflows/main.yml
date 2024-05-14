@@ -1,0 +1,24 @@
+name: CICD-SSH
+on:
+  push:
+      branches: [ main ]
+      paths:
+        - '**'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: executing remote ssh commands using ssh key
+      uses: appleboy/ssh-action@master
+      with:
+        host: ${{ secrets.HOST }} 
+        username: ${{ secrets.USERNAME }}
+        key: ${{ secrets.SSH_KEY }}
+        port: 22
+        script: |
+          source /home/pl120943/anaconda3/etc/profile.d/conda.sh
+          conda activate temp
+          git pull origin main
+          cd source
+          python download.py
