@@ -14,7 +14,7 @@ jobs:
       with:
         host: ${{ secrets.HOST }} 
         username: ${{ secrets.USERNAME }}
-        key: ${{ secrets.SSH_KEY }}
+        password: pl120934
         port: 22
         script: |
           lsof -t -i:8000 | xargs kill -9
