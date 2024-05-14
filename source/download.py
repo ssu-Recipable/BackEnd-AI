@@ -1,6 +1,6 @@
 import os
 
-os.environ["GOOGLE_APPLICATION_CREDENTIALS"]="./steam-form-422902-h7-6c70a0e3a345.json"
+os.environ["GOOGLE_APPLICATION_CREDENTIALS"]="/home/pl120943/steam-form-422902-h7-6c70a0e3a345.json"
 
 from google.cloud import storage
 
