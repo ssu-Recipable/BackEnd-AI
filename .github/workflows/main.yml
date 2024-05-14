@@ -21,4 +21,6 @@ jobs:
           conda activate temp
           git pull origin main
           cd source
+          echo "Download Start"
           python download.py
+          echo "Download End"
