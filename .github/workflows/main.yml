@@ -16,7 +16,6 @@ jobs:
         username: ${{ secrets.USERNAME }}
         key: ${{ secrets.SSH_KEY }}
         port: 22
-        passphrase: 0628
         script: |
           lsof -t -i:8000 | xargs kill -9
           source /home/pl120943/anaconda3/etc/profile.d/conda.sh
