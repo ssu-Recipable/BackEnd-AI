@@ -9,6 +9,12 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+    - name: Print SSH key
+      run: echo "${{ secrets.SSH_KEY }}"
+    - name: Print Host
+      run: echo "${{ secrets.HOST }}"
+    - name: Print USERNAME
+      run: echo "${{ secrets.USERNAME }}"
     - name: executing remote ssh commands using ssh key
       uses: appleboy/ssh-action@master
       with:
