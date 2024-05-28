@@ -10,7 +10,7 @@ import pandas as pd
 import uvicorn
 
 tokenizer = BertTokenizer.from_pretrained('kykim/bert-kor-base')
-model = BertForSequenceClassification.from_pretrained('kykim/bert-kor-base', num_labels=317)
+model = BertForSequenceClassification.from_pretrained('kykim/bert-kor-base', num_labels=318)
 model.load_state_dict(torch.load('model.pth', map_location=torch.device('cpu')))
 
 def pad_sequences(input_ids, maxlen) :
